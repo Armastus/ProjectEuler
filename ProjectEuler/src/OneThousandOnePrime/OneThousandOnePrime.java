@@ -6,12 +6,18 @@ package OneThousandOnePrime;
  */
 public class OneThousandOnePrime {
     public static void main(String[] args){
+        //int num[] = {};
 
-        for(int x = 2; x <= 100; x++){
-            if(13 % x == 0) {
-                //x = x / 100;
-                System.out.println(x);
+/*        for(int x = 0; x <= num.length; x++){
+            if()
+            System.out.println(x);*/
+        int num = 13;
+        for(int x = 2; x <= num; x++){
+            for(int y = 2; y <= num; y++){
+                if(y % x == 0)
+                    System.out.print(y + " ");
             }
+            System.out.println();
         }
     }
 }
