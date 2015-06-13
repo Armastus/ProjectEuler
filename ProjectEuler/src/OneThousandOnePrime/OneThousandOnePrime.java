@@ -6,18 +6,27 @@ package OneThousandOnePrime;
  */
 public class OneThousandOnePrime {
     public static void main(String[] args){
-        //int num[] = {};
+        int count = 1;
+        long num = 10000000;
+        boolean isPrime = true;
 
-/*        for(int x = 0; x <= num.length; x++){
-            if()
-            System.out.println(x);*/
-        int num = 13;
         for(int x = 2; x <= num; x++){
-            for(int y = 2; y <= num; y++){
-                if(y % x == 0)
-                    System.out.print(y + " ");
+            for(int y = 0; y <= num; y++){
+                if(x != y && x % y == 2){
+                    x = x/y;
+                    System.out.println(x);
+                    isPrime = false;
+                    break;
+                }
             }
-            System.out.println();
+            if(isPrime){
+                count++;
+                if(count == 100){
+                    System.out.println(x + " ");
+                }
+                isPrime = true;
+            }
         }
+        System.out.println();
     }
 }
